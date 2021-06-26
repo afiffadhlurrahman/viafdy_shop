@@ -6,7 +6,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo base_url('assets/img/slider1.jpg') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/img/slider1_edit.jpg') ?>" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="<?php echo base_url('assets/img/slider2.jpg') ?>" class="d-block w-100" alt="...">
@@ -30,7 +30,8 @@
                     <small><?php echo $brg->keterangan ?></small></br>
                     <!-- <p class="card-text"></p> -->
                     <span class="badge badge-pill bg-success text-white mb-3">Rp. <?php echo $brg->harga ?></span> </br>
-                    <a href="#" class="btn btn-sm btn-primary">Tambah ke Keranjang</a>
+                    <!-- <a href="#" class="btn btn-sm btn-primary">Tambah ke Keranjang</a> -->
+                    <?php echo anchor('dashboard/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-sm btn-primary"> Tambah ke Keranjang </div>') ?>
                     <a href="#" class="btn btn-sm btn-success">Detail</a>
                 </div>
             </div>
