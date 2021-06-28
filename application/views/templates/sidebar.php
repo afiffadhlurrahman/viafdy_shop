@@ -19,7 +19,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -134,7 +134,7 @@
                                     <?php
                                     $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . ' items'
                                     ?>
-                                    <?php echo $keranjang ?>
+                                    <?php echo anchor('dashboard/detail_keranjang', $keranjang) ?>
                                 </li>
                             </ul>
                         </div>

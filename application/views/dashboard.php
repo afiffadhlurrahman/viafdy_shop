@@ -29,10 +29,10 @@
                     <h5 class="card-title mb-1"><?php echo $brg->nama_brg ?></h5>
                     <small><?php echo $brg->keterangan ?></small></br>
                     <!-- <p class="card-text"></p> -->
-                    <span class="badge badge-pill bg-success text-white mb-3">Rp. <?php echo $brg->harga ?></span> </br>
+                    <span class="badge badge-pill bg-success text-white mb-3">Rp. <?php echo number_format($brg->harga, 0, ',', '.')  ?></span> </br>
                     <!-- <a href="#" class="btn btn-sm btn-primary">Tambah ke Keranjang</a> -->
                     <?php echo anchor('dashboard/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-sm btn-primary"> Tambah ke Keranjang </div>') ?>
-                    <a href="#" class="btn btn-sm btn-success">Detail</a>
+                    <?php echo anchor('dashboard/detail/' . $brg->id_brg, '<div class="btn btn-sm btn-success"> Detail </div>') ?>
                 </div>
             </div>
         <?php endforeach; ?>
